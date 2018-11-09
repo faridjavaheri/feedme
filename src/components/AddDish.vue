@@ -1,8 +1,9 @@
 <template>
 <div class="add-dish container">
-  <h2 class="center-align indigo-text">Add New Dish Recipe</h2>
+  <h2 class="center-align indigo-text">Add New Dish or Drink</h2>
   <form @submit.prevent="AddDish"> <!--prevent refresh on submit button. call AddDish method, which adds dish record to firestore database.-->
-    <FileUploaderMain />>
+    <FileUploaderMain />
+    <UploaderForm />
     <div class="field title">
       <label for="title">Dish Title:</label>
       <input type="text" name="title" v-model="title">
@@ -28,11 +29,13 @@
 import db from '../firebase/init'
 import slugify from 'slugify'
 import FileUploaderMain from './FileUploaderMain.vue'
+import UploaderForm from './UploaderForm.vue'
 
 export default {
   name: 'AddDish',
   components: {
-    FileUploaderMain
+    FileUploaderMain,
+    UploaderForm
   },
   data() {
     return {
