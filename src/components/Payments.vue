@@ -5,6 +5,10 @@
 <!-- Step 1: add to index.html:
 <script src="https://js.stripe.com/v3/"></script>
 
+associated files: 
+Payments.js
+functions/index.js
+root index.html
 -->
 
 
